@@ -5,18 +5,30 @@ class App extends Component {
   state = {
     currentUrl: 'https://www.youtube.com/watch?v=p_f9eTjcNW4',
     isFetching: false,
-    history:[]
+    history:[],
+    isError: false,
+    errorText: ''
   };
+
+  componentDidMount() {
+  }
 
   handleUrl = () => {
     const data = {
       url: this.state.currentUrl
     }
     this.state.history.push(data)
-    this.setState({ isFetching: true , currentUrl: this.refs.ticket_desc.value, history: this.state.history})
+    this.setState({ isFetching: true , currentUrl: this.refs.ticket_desc.value, history: this.state.history, isError: false})
+  }
+
+  onError = (data) => {
+    if(data.type === 'error') {
+      this.setState({isError: true, errorText: 'Invalid url'})
+    }
   }
 
   render() {  
+    console.log(this.state.history)
     return (
       <div>
         <input 
@@ -32,7 +44,8 @@ class App extends Component {
             <div>
               <label>NOW-PLAYING</label>
               <div>
-                <ReactPlayer url={this.state.currentUrl} playing width='600px' height='600px'/>
+                <ReactPlayer url={this.state.currentUrl} playing width='600px' height='600px' onError={this.onError}/>
+                {this.state.isError && <p>{this.state.errorText}</p>}
               </div>
             </div>
             <div>
