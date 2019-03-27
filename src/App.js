@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactPlayer from 'react-player'
+import './index.css'
 
 class App extends Component {
   state = {
@@ -28,35 +29,42 @@ class App extends Component {
   }
 
   render() {  
-    console.log(this.state.history)
     return (
-      <div>
+      <div className='root'>
+        <p>
+        <b>Video player</b>
+        </p>
         <input 
-          type="text"
+          type='text'
           ref='ticket_desc'
+          className='text'
+          placeholder='Enter video url'
         />
         <button onClick={() => this.handleUrl()}>
           Go
         </button>
 
         <br />
-        <div>
-            <div>
-              <label>NOW-PLAYING</label>
-              <div>
+        <div className='container'>
+            <div className='col-xs-8'>
+              <label className='lablel'>NOW-PLAYING</label>
+              <div className='list'>
                 <ReactPlayer url={this.state.currentUrl} playing width='600px' height='600px' onError={this.onError}/>
-                {this.state.isError && <p>{this.state.errorText}</p>}
+                {this.state.isError && <p className='text-red'>{this.state.errorText}</p>}
               </div>
             </div>
-            <div>
-              <label>RECENTLY PLAYED</label>
-              <div>
+            <div className='col-xs-4'>
+              <label className='label'>RECENTLY PLAYED</label>
+              <div className='list inline'>
                 {this.state.history.length > 0 && this.state.history.map((item, index) =>
                   <div>
                   <ReactPlayer url={item.url} playing width='300px' height='300px' />
                   <br/>
                   </div>
                 )}
+                {this.state.history.length <= 0 &&
+                  <div>sorry no history</div>
+                }
               </div>
             </div>
         </div>

@@ -1,0 +1,33 @@
+.root {
+  text-align: center;
+}
+.container {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 20%;
+}
+
+.label {
+  font-weight: 600px;
+}
+
+.list {
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 3px;
+  min-height: 7em;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-weight: normal;
+  display: flex;
+  background-color: #E6E7E8;
+}
+.inline {
+  display: block;
+}
+.text {
+  width: 30%;
+}
+body {
+  background-color: #fafbfc;
+}
