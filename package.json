@@ -3,6 +3,7 @@
   "description": "Have fun!",
   "version": "0.0.22",
   "main": "index.js",
+  "homepage": "http://prathibhaaa.github.io/video-player",
   "dependencies": {
     "prop-types": "15.6.0",
     "react": "16.0.0",
@@ -12,17 +13,18 @@
     "redux": "^3.6.0",
     "axios": "^0.15.2",
     "react-addons-update": "^15.6.2",
-    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-player": "1.10.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-scripts": "1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "react-scripts test",
+    "deploy": "gh-pages -d build"
   }
 }
-
