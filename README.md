@@ -1,9 +1,10 @@
 # video-player
 
 Demo: https://prathibhaaa.github.io/video-player/#/
+hard refresh
  
  To run the app
- Donload /clone 
+ Download /clone 
  
  ```bash
  npm install
