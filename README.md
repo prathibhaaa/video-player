@@ -1,2 +1,15 @@
 # video-player
-In progress
+
+Demo: https://prathibhaaa.github.io/video-player/#/
+ 
+ To run the app
+ Donload /clone 
+ 
+ ```bash
+ npm install
+ ```
+ and 
+ ```bash
+ npm start
+ ```
+
