@@ -54,7 +54,7 @@ class App extends Component {
               </div>
             </div>
             <div className='col-xs-4'>
-              <label className='label'>RECENTLY PLAYED</label>
+              <label className='label'>RECENTLY PLAYED LIST</label>
               <div className='list inline'>
                 {this.state.history.length > 0 && this.state.history.map((item, index) =>
                   <div>
