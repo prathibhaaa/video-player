@@ -47,7 +47,7 @@ class App extends Component {
         <br />
         <div className='container'>
             <div className='col-xs-8'>
-              <label className='lablel'>NOW-PLAYING</label>
+              <label className='lablel'>NOW-PLAYING TEST</label>
               <div className='list'>
                 <ReactPlayer url={this.state.currentUrl} playing width='600px' height='600px' onError={this.onError}/>
                 {this.state.isError && <p className='text-red'>{this.state.errorText}</p>}
